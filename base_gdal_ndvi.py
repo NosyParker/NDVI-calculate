@@ -67,14 +67,14 @@ if __name__ == "__main__":
     options = arg_parser.parse_args()
                 
     if not os.path.exists ( options.red_filename ):
-        print ("ERROR: The red filename {} does not exist".format(options.red_filename))
+        print ("ERROR: Указанный RED-канал {} не существует!".format(options.red_filename))
         sys.exit ( -1 )
     if not os.path.exists ( options.nir_filename ):
-        print ("ERROR: The nir filename {} does not exist".format(options.nir_filename))
+        print ("ERROR: Указанный NIR-канал {} не существует".format(options.nir_filename))
         sys.exit ( -1 )
     if os.path.exists ( options.out_filename):
-        print ("ERROR: The output filename {} does already exist".format(options.out_filename))
-        print ("Select a different one, or delete the file.")
+        print ("ERROR: Файл с именем {} уже существует!".format(options.out_filename))
+        print ("Выберите другое имя файла или удалите существующий!")
         sys.exit ( -1 )
         
         
